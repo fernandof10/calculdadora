@@ -11,5 +11,11 @@ altura = 250
 tamanho = '{}x{}'.format(largura, altura)
 janela.geometry(tamanho)
 
+#TODO:2 - Crie 2 frames. 1, que contem o resultado e o outro com os botões.
+frame_res = Frame(janela)
+frame_res.pack()
+frame_but = Frame(janela)
+frame_but.pack()
+
 #Exibe a janela e faz com que ela fique em loop
 janela.mainloop()
