@@ -1,7 +1,6 @@
 # 0 - Importe o Tkinter
 from tkinter import *
 
-
 #TODO 1: Crie uma janela, com o nome Calculadora
 janela = Tk()
 janela.title("Calculadora")
@@ -13,7 +12,7 @@ janela.geometry(tamanho)
 
 #TODO 2: Crie 2 frames. 1, que contem o resultado e o outro com os botões.
 #TODO 3: O primeiro frame ocupa todo o espaço disponível em X e tem uma borda do tipo afundada
-frame_res = Frame(janela, relief=SUNKEN,  width=largura)
+frame_res = Frame(janela, relief=SUNKEN, width=largura)
 frame_res.pack()
 frame_but = Frame(janela, width=largura)
 frame_but.pack()
@@ -23,9 +22,15 @@ frame_but.pack()
 # - outro com a fonte maior, contendo somente o número digitado ou o resultado.
 # Eles são dispostos um sobre o outro e também preenchem todo o espaço disponível em X.
 #TODO 5: O texto em ambos os labels é ancorado do lado direito.
-label_ope = Label(frame_res, text='On',  font=("Helvetica", "12"), width=largura, anchor=E)
+
+#TODO 7: Crie 2 variáveis globais do tipo string para os labels de resultado e operações.Vamos usar essas variáveis junto com os labels, assim, sempre que as alteramos, os textos nos labels também mudarão
+str_resultado = StringVar()
+str_operacao = StringVar()
+str_resultado.set('')
+str_operacao.set('')
+label_ope = Label(frame_res, textvariable=str_operacao,  font=("Helvetica", "12"), width=largura, anchor=E)
 label_ope.pack()
-label_res = Label(frame_res, text='0',  font=("Helvetica", "18"), width=largura, anchor=E)
+label_res = Label(frame_res, textvariable=str_resultado,  font=("Helvetica", "18"), width=largura, anchor=E)
 label_res.pack()
 
 #TODO 6: Dentro do segundo frame principal estão os botões. Eles são dispostos em uma grade, como uma tabela.
@@ -69,6 +74,9 @@ bp = Button(frame_but, text='.',font=("Helvetica", "18"),  height=1, width=4)
 bp.grid(row=3, column=2)
 bm = Button(frame_but, text='+',font=("Helvetica", "18"),  height=1, width=4)
 bm.grid(row=3, column=3)
+
+
+
 
 #Exibe a janela e faz com que ela fique em loop
 
