@@ -29,43 +29,45 @@ label_res = Label(frame_res, text='0',  font=("Helvetica", "18"), width=largura,
 label_res.pack()
 
 #TODO 6: Dentro do segundo frame principal estão os botões. Eles são dispostos em uma grade, como uma tabela.
-b7 = Button(frame_but, text='7')
+#TODO 6.1: Configuramos o tamanho dos botões e a font
+b7 = Button(frame_but, text='7',font=("Helvetica", "18"),  height=1, width=4)
 b7.grid(row=0, column=0)
-b8 = Button(frame_but, text='8')
+b8 = Button(frame_but, text='8',font=("Helvetica", "18"),  height=1, width=4)
 b8.grid(row=0, column=1)
-b9 = Button(frame_but, text='9')
+b9 = Button(frame_but, text='9',font=("Helvetica", "18"),  height=1, width=4)
 b9.grid(row=0, column=2)
-bdiv = Button(frame_but, text='\u00F7')
+bdiv = Button(frame_but, text='\u00F7',font=("Helvetica", "18"),  height=1, width=4)
 bdiv.grid(row=0, column=3)
-bac = Button(frame_but, text='AC')
+bac = Button(frame_but, text='AC',font=("Helvetica", "18"),  height=1, width=4)
 bac.grid(row=0, column=4)
 
-b4 = Button(frame_but, text='4')
+b4 = Button(frame_but, text='4',font=("Helvetica", "18"),  height=1, width=4)
 b4.grid(row=1, column=0)
-b5 = Button(frame_but, text='5')
+b5 = Button(frame_but, text='5',font=("Helvetica", "18"),  height=1, width=4)
 b5.grid(row=1, column=1)
-b6 = Button(frame_but, text='6')
+b6 = Button(frame_but, text='6',font=("Helvetica", "18"),  height=1, width=4)
 b6.grid(row=1, column=2)
-bmult = Button(frame_but, text='\u00D7')
+bmult = Button(frame_but, text='\u00D7',font=("Helvetica", "18"),  height=1, width=4)
 bmult.grid(row=1, column=3)
-bapag = Button(frame_but, text='\u2190')
+bapag = Button(frame_but, text='\u2190',font=("Helvetica", "18"),  height=1, width=4)
 bapag.grid(row=1, column=4)
 
-b1 = Button(frame_but, text='1')
+b1 = Button(frame_but, text='1',font=("Helvetica", "18"),  height=1, width=4)
 b1.grid(row=2, column=0)
-b2 = Button(frame_but, text='2')
+b2 = Button(frame_but, text='2',font=("Helvetica", "18"),  height=1, width=4)
 b2.grid(row=2, column=1)
-b3 = Button(frame_but, text='3')
+b3 = Button(frame_but, text='3',font=("Helvetica", "18"),  height=1, width=4)
 b3.grid(row=2, column=2)
-bneg = Button(frame_but, text='-')
+bneg = Button(frame_but, text='-',font=("Helvetica", "18"),  height=1, width=4)
 bneg.grid(row=2, column=3)
-bres = Button(frame_but, text='=')
-bres.grid(row=2, column=4)
-b0 = Button(frame_but, text='0')
-b0.grid(row=3, column=0)
-bp = Button(frame_but, text='.')
+bres = Button(frame_but, text='=',font=("Helvetica", "18"),  height=1, width=4)
+bres.grid(row=2, column=4, rowspan = 2,sticky = N+S)
+
+b0 = Button(frame_but, text='0',font=("Helvetica", "18"),  height=1, width=4)
+b0.grid(row=3, column=0, columnspan = 2, sticky = W+E)
+bp = Button(frame_but, text='.',font=("Helvetica", "18"),  height=1, width=4)
 bp.grid(row=3, column=2)
-bm = Button(frame_but, text='+')
+bm = Button(frame_but, text='+',font=("Helvetica", "18"),  height=1, width=4)
 bm.grid(row=3, column=3)
 
 #Exibe a janela e faz com que ela fique em loop
@@ -83,3 +85,6 @@ janela.mainloop()
 #4 - https://www.tutorialspoint.com/python/tk_fonts.htm
 #5 - https://www.tutorialspoint.com/python/tk_anchors.htm
 #6 - https://www.fileformat.info/info/unicode/category/Sm/list.htm
+#6 - https://www.tutorialspoint.com/python/tk_button.htm
+#6.1 https://effbot.org/tkinterbook/grid.htm
+#6.1 https://www.tutorialspoint.com/python/tk_grid.htm
