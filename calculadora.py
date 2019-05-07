@@ -22,9 +22,10 @@ frame_but.pack()
 # - um com uma fonte pequena, que vai conter toda a operação realizada,
 # - outro com a fonte maior, contendo somente o número digitado ou o resultado.
 # Eles são dispostos um sobre o outro e também preenchem todo o espaço disponível em X.
-label_ope = Label(frame_res, text='On',  font=("Helvetica", "12"))
+#TODO 5: O texto em ambos os labels é ancorado do lado direito.
+label_ope = Label(frame_res, text='On',  font=("Helvetica", "12"), width=largura, anchor=E)
 label_ope.pack()
-label_res = Label(frame_res, text='0',  font=("Helvetica", "18"))
+label_res = Label(frame_res, text='0',  font=("Helvetica", "18"), width=largura, anchor=E)
 label_res.pack()
 
 #Exibe a janela e faz com que ela fique em loop
@@ -39,3 +40,5 @@ janela.mainloop()
 #3 - https://www.tutorialspoint.com/python3/tk_frame.htm
 #3 - https://www.tutorialspoint.com/python/tk_relief.htm
 #4 - https://www.tutorialspoint.com/python3/tk_label.htm
+#4 - https://www.tutorialspoint.com/python/tk_fonts.htm
+#5 - https://www.tutorialspoint.com/python/tk_anchors.htm
