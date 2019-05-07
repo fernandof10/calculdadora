@@ -18,7 +18,17 @@ frame_res.pack()
 frame_but = Frame(janela, width=largura)
 frame_but.pack()
 
+#TODO 4: Dentro desse primeiro frame existem dois labels:
+# - um com uma fonte pequena, que vai conter toda a operação realizada,
+# - outro com a fonte maior, contendo somente o número digitado ou o resultado.
+# Eles são dispostos um sobre o outro e também preenchem todo o espaço disponível em X.
+label_ope = Label(frame_res, text='On',  font=("Helvetica", "12"))
+label_ope.pack()
+label_res = Label(frame_res, text='0',  font=("Helvetica", "18"))
+label_res.pack()
+
 #Exibe a janela e faz com que ela fique em loop
+
 janela.mainloop()
 
 
@@ -26,5 +36,6 @@ janela.mainloop()
 
 
 #Links legais
-#https://www.tutorialspoint.com/python3/tk_frame.htm
-#https://www.tutorialspoint.com/python/tk_relief.htm
+#3 - https://www.tutorialspoint.com/python3/tk_frame.htm
+#3 - https://www.tutorialspoint.com/python/tk_relief.htm
+#4 - https://www.tutorialspoint.com/python3/tk_label.htm
